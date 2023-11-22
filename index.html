@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/image-hero-mobile.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <title>Web Site</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Epilogue', sans-serif;
+    }
+    p{
+      font-size: 18px;
+      color: var(--Medium-Gray);
+      cursor: pointer;
+      font-weight: 500;
+    }
+    :root{
+      --Almost-White: hsl(0, 0%, 98%);
+      --Medium-Gray: hsl(0, 0%, 41%);
+      --Almost-Black: hsl(0, 0%, 8%);
+
+    }
+    body{
+      background-color: var(--Almost-White);
+    }
+    .container{
+      max-width: 1440px;
+      height: 100vh;
+    }
+    .container > header{
+      display: flex;
+      margin: 30px 50px;
+    }
+    header > div > P:hover{
+      color: var(--Almost-Black);
+    }
+    header > div{
+      margin: 0 30px;
+    }
+    .logo > img{
+      width: 100px;
+     }
+    header .accounts {
+      margin-left: 520px;
+      display: flex;
+    }
+    button{
+      border: 2px solid var(--Medium-Gray);
+      padding: 10px 20px;
+      background: transparent;
+      border-radius: 10px;
+      cursor: pointer;
+      color: var(--Medium-Gray);
+    }
+    header .accounts button:hover{
+      color: var(--Almost-Black);
+      border: 2px solid var(--Almost-Black)
+    }
+    header .accounts button:nth-child(1){
+      margin-right: 20px;
+      border: none;
+    }
+    .inner-Features{
+      width: 150px;
+      background-color: #fff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      position: absolute;
+      margin-left: 140px;
+      margin-top: 35px;
+      display:none;
+    }
+    
+    .inner-Features p{
+      margin: 10px 0;
+    }
+    .inner-Features p img{
+      margin-right: 5px;
+    }
+    .inner-company{
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      width: 115px;
+      background-color: #fff;
+      padding: 10px 15px;
+      position: absolute;
+      margin-top: 35px;
+      margin-left: 340px;
+      display: none;
+    }
+    .inner-company p{
+      margin: 10px 0;
+    }
+    .cont{
+      display: flex;
+      width: 90%;
+      margin: 40px auto;
+    }
+    .cont .img img{
+      width: 500px;
+    }
+    .cont  .txt{
+      width: 80%;
+      margin: 80px 70px;
+    }
+    .cont .txt h1{
+      font-size: 80px;
+      font-weight: 700;
+    }
+    .cont .txt p{
+      margin: 80px 0;
+    }
+    .cont .txt button{
+      background-color: var(--Almost-Black);
+      border: 2px solid var(--Almost-Black);
+      color: var(--Almost-White);
+    }
+    .cont .txt button:hover{
+      background-color: transparent;
+      color: var(--Medium-Gray);
+    }
+    .cont .txt .img-box{
+      margin: 60px auto;
+      width: 100%;
+    }
+    .cont .txt .img-box img{
+      margin: 0 20px;
+      width: 100px;
+    }
+    #Features{
+      position: relative;
+    }
+    #Features img{
+      position: absolute;
+      margin-top: 5px;
+    }
+    #Company-p{
+      position: relative;
+    }
+    #Company-p img{
+      position: absolute;
+      margin-top: 5px;
+    }
+    @media only screen and (max-width: 375px){
+      #manu{
+        display: block;
+        width: 30px;
+      }
+      header .accounts{
+        display: none;
+      }
+      #Company-p{
+        display: none;
+      }
+      #mobile-veu{
+        src: url(images/image-hero-mobile.png);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- header section -->
+  <div class="container">
+    <header>
+      <img src="images/icon-menu.svg" id="manu" style="display: none;">
+      <div class="logo"><img src="images/logo.svg"></div>
+      <div class="Features-bar" >
+        <p id="Features">Features  <img src="images/icon-arrow-down.svg" id="Features-img" class="imgs" style="height: 10px;"></p>
+      </div>
+      <div class="inner-Features">
+        <p><img src="images/icon-todo.svg"> Todo List</p>
+        <p><img src="images/icon-calendar.svg"> Calendar</p>
+        <p><img src="images/icon-reminders.svg"> Reminder</p>
+        <p><img src="images/icon-planning.svg"> Planning</p>
+      </div>
+      <div class="Company-bar">
+        <p id="Company-p">Company  <img id="Company-bar-img" src="images/icon-arrow-down.svg" class="imgs" style="height: 10px;"></p>
+      </div>
+      <div class="inner-company">
+        <p>History</p>
+        <p>Our Team</p>
+        <p>Blog</p>
+      </div>
+      <div class="Careers">
+        <p>Careers</p>
+      </div>
+      <div class="About">
+        <p>About</p>
+      </div>
+      <div class="accounts">
+        <button>Login</button>
+        <button>Register</button>
+      </div>
+    </header>
+    <div class="cont">
+      <div class="txt">
+        <h1>Make <br> remote work</h1>
+        <p>Get your team in sync, no matter your location. Streamline processes, 
+          create team rituals, and watch productivity soar.</p>
+          <button>Learn more</button>
+          <div class="img-box">
+            <img src="images/client-databiz.svg" >
+            <img src="images/client-audiophile.svg" >
+            <img src="images/client-meet.svg" >
+            <img src="images/client-maker.svg" >
+          </div>
+      </div>
+      <div class="img">
+        <img id="mobile-veu" src="images/image-hero-desktop.png">
+      </div>
+    </div>
+  </div>
+  <script>
+    const arrowDown = document.getElementById('Features');
+    const arrowDownForCompanyBar =document.querySelector('#Company-p')
+    let num = 1;
+    arrowDown.onclick = function(){
+      if(num == 1){
+      document.querySelector('.inner-Features').style.display = 'block';
+      document.getElementById('Features-img').src = "images/icon-arrow-up.svg";
+      num = num+1
+      }
+      else{
+        num = num-1;
+      document.querySelector('.inner-Features').style.display = 'none';
+      document.getElementById('Features-img').src = "images/icon-arrow-down.svg";
+      }
+    }
+    arrowDownForCompanyBar.onclick = function(){
+      if(num == 1){
+      document.querySelector('.inner-company').style.display = 'block';
+      document.getElementById('Company-bar-img').src = "images/icon-arrow-up.svg";
+      num = num+1
+      }
+      else{
+        num = num-1;
+      document.querySelector('.inner-company').style.display = 'none';
+      document.getElementById('Company-bar-img').src = "images/icon-arrow-down.svg";
+      }
+    }
+  </script>
+</body>
+</html>
